@@ -39,3 +39,8 @@ yarn-error.log*
 # typescript
 *.tsbuildinfo
 next-env.d.ts
+
+/src/components/transition
+/src/components/swiper-css
+/src/app/check
+.vercel

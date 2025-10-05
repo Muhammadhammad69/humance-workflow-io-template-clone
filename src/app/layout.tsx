@@ -1,6 +1,20 @@
 import type { Metadata } from "next";
-import { Geist, Geist_Mono } from "next/font/google";
+import { Geist, Geist_Mono, Be_Vietnam_Pro, DM_Sans } from "next/font/google";
+
 import "./globals.css";
+import {Footer} from "@/components/landing-page/footer"
+
+const beVietnamPro = Be_Vietnam_Pro({
+  variable: "--font-be-vietnam-pro",
+  weight: ["400", "500", "700"],
+  subsets: ["latin"],
+})
+
+const dmSans = DM_Sans({
+  variable: "--font-dm-sans",
+  weight: ["400", "500", "700"],
+  subsets: ["latin"],
+})
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -25,9 +39,10 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
+        className={`${geistSans.variable} ${geistMono.variable} ${beVietnamPro.variable} ${dmSans.variable} antialiased bg-background-color`}
       >
         {children}
+        <Footer />
       </body>
     </html>
   );
