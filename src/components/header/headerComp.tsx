@@ -143,7 +143,7 @@ export const HeaderComp = (props: {props:{bgColor: string, color:string, isBlack
                     // className={navigationMenuTriggerStyle()}
                     className="bg-transparent! text-[16px] font-be-vietnam-pro font-medium text-inherit "
                   >
-                    <Link href="/docs">Services</Link>
+                    <Link href="/services">Services</Link>
                   </NavigationMenuLink>
                 </NavigationMenuItem>
 
