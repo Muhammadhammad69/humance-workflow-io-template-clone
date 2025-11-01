@@ -9,6 +9,7 @@ type AnimatedProgressProviderProps = {
   duration: number;
   easingFunction: (t: number) => number; // ✅ specific function type
   repeat: boolean;
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
   children: any; // ✅ properly typed children
 };
 const AnimatedProgressProvider = ({
