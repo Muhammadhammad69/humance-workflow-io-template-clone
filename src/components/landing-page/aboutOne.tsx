@@ -12,7 +12,7 @@ export const AboutOne = () => {
   }, []);
   return (
     <section
-      className="mx-0  xl:mx-[50px] px-[30px] lg:px-[50px] bg-dark-color xl:rounded-[25px] py-[100px] bg-no-repeat bg-auto bg-[position:100%_3%] max-[768px]:bg-none! "
+      className="mx-0  xl:mx-[50px] px-[30px] lg:px-[50px] bg-dark-color xl:rounded-[25px] py-[40px] xs:py-[60px] sm:py-[80px] md:py-[100px] bg-no-repeat bg-auto bg-[position:100%_3%] max-[768px]:bg-none! "
       style={{ backgroundImage: "url(/about-one/background-image.png)" }}
     >
       <div className=" ">
@@ -29,7 +29,7 @@ export const AboutOne = () => {
             Your business goals are our priority
           </h1>
         </div>
-        <div className="flex flex-col lg:flex-row box-border mt-[70px]">
+        <div className="flex flex-col lg:flex-row box-border mt-8 sm:mt-12 md:mt-16.5 ">
           <div className="w-full lg:w-[58%] min-h-[1px]  relative box-border">
             <div
               style={{
@@ -73,7 +73,7 @@ export const AboutOne = () => {
             </div>
           </div>
           <div className="w-full lg:w-[42%] box-border px-0 lg:pr-[10px] lg:pl-[30px] min-h-[1px]">
-            <div className="pt-[50px] pb-[28px] box-border">
+            <div className="pt-8 sm:pt-10 md:pt-12.5 pb-5 sm:pb-7 box-border">
               <div className="mb-[20px]">
                 <p className="text-[#fffc] text-text-size font-dm-sans font-[500]"
                 data-aos="fade-up">
@@ -86,7 +86,7 @@ export const AboutOne = () => {
               {Array.from({ length: 3 }).map((_, index) => {
                 return (
                   <div
-                    className="border-b-[1px] border-solid border-[#fff3] flex justify-start mt-[15px] pb-[40px] box-border mb-[35px]"
+                    className="border-b-[1px] border-solid border-[#fff3] flex justify-start mt-[15px] pb-6 sm:pb-8 md:pb-10 box-border mb-[35px]"
                     key={`who-we-are-${index}`}
                   >
                     <div className="w-[36%]">

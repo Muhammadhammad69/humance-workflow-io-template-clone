@@ -35,7 +35,7 @@ const AboutCardComp = () => {
     Aos.init({ once: true, delay: 300, duration: 1000 });
   }, []);
   return (
-    <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6 mt-[90px]">
+    <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6 mt-[40px] xs:mt-[60px] sm:mt-[80px] md:mt-[90px]">
       {aboutCardInfo.map((card, index) => {
         return (
           <div

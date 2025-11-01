@@ -1,3 +1,4 @@
+"use client";
 import React from "react";
 import { Button } from "@/components/ui/button";
 import Image from "next/image";
@@ -44,7 +45,7 @@ export const OurProcess = () => {
     Aos.init({ once: true, delay: 300, duration: 1000 });
   }, []);
   return (
-    <section className="pt-[100px] box-border">
+    <section className="pt-[50px] xs:pt-[70px] sm:pt-[80px] md:pt-[100px] box-border">
       <div className="flex flex-col lg:flex-row">
         <div className="w-[25%] box-border">
           <div>
@@ -69,7 +70,7 @@ export const OurProcess = () => {
           </div>
         </div>
       </div>
-      <div className="w-full mt-[100px]">
+      <div className="w-full mt-[50px] xs:mt-[70px] sm:mt-[80px] md:mt-[100px]">
         <div className="grid grids-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-[15px] lg:gap-0">
           {ourProcessData.map((item) => (
             <div key={`our-process-${item.id}`} className="mb-[20px] lg:mb-0 " data-aos = "fade-up" data-aos-delay={100 * item.id}>

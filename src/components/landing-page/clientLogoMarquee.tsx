@@ -6,7 +6,7 @@ import Aos from "aos";
 import { useEffect } from "react";
 
 import "aos/dist/aos.css";
-export const ClientLogoMarquee = () => {
+export const ClientLogoMarquee = ({ isAbout }: { isAbout?: boolean }) => {
   const globalClientLogo = [
     {
       id: 1,
@@ -50,11 +50,17 @@ export const ClientLogoMarquee = () => {
     },
   ];
   useEffect(() => {
-      Aos.init({ once: true, delay: 300, duration: 1000 });
-    }, []);
+    Aos.init({ once: true, delay: 300, duration: 1000 });
+  }, []);
   return (
-    <section className="py-[55px] border-b-[1px] border-solid border-[#052b311a] box-border mb-[20px] flex">
-      <div className="w-full lg:w-[75%] px-[10px] min-h-[1px] relative box-border">
+    <section
+      className={`py-[30px] sm:py-[55px] border-b-[1px] border-solid  box-border mb-[20px] flex
+    ${isAbout ? "border-background-color" : "border-[#052b311a]"}
+    `}
+    >
+      <div className={`w-full  px-[10px] min-h-[1px] relative box-border
+        ${!isAbout && "lg:w-[75%]"}
+        `}>
         <Marquee speed={100}>
           {globalClientLogo.map((item) => (
             <Image
@@ -68,15 +74,20 @@ export const ClientLogoMarquee = () => {
           ))}
         </Marquee>
       </div>
-      <div className="hidden lg:block w-[25%] px-[10px] min-h-[1px] relative box-border" data-aos="fade-up">
-        <div className="box-border">
-          <div className="font-be-vietnam-pro text-[18px] text-black font-medium text-right ">
-            Trusted and funded by more
-            <br />
-            then 800 companies
+      {!isAbout && (
+        <div
+          className="hidden lg:block w-[25%] px-[10px] min-h-[1px] relative box-border"
+          data-aos="fade-up"
+        >
+          <div className="box-border">
+            <div className="font-be-vietnam-pro text-[18px] text-black font-medium text-right ">
+              Trusted and funded by more
+              <br />
+              then 800 companies
+            </div>
           </div>
         </div>
-      </div>
+      )}
     </section>
   );
 };

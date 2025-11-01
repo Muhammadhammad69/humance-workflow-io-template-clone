@@ -11,10 +11,11 @@
   --color-dark-color: #032024;
   --color-global-color: #063137;
   --text-text-size: 17px;
+  --breakpoint-xs: 479px;
   --breakpoint-sm: 640px;
-  --breakpoint-lbx:1095px ;
-  
-
+  --breakpoint-md: 768px;
+  --breakpoint-lg: 1024px;
+  --breakpoint-lbx:1095px;
 }
 
 @theme inline {

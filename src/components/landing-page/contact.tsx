@@ -22,18 +22,18 @@ export const Contact = () => {
     Aos.init({ once: true, delay: 300, duration: 1000 });
   }, []);
   return (
-    <section className="py-[100px] xl:mx-[50px] box-border">
+    <section className="py-[40px] xs:py-[60px] sm:py-[80px] md:py-[100px] xl:mx-[50px] box-border">
       <div className="flex flex-col lg:flex-row">
         <div className="w-full lg:w-1/2 min-h-[1px] lg:pl-[10px] lg:pr-[20px] box-border  max-[1024px]:mb-[20px]">
-          <div className="box-border bg-white bg-[url('/contact/bg-one.png')] bg-no-repeat max-[480px]:bg-[size:auto_220px] bg-[size:auto_350px] lg:bg-auto rounded-[20px] z-[1] pt-[70px] pb-[45px] pl-[30px] max-[480px]:bg-[position:100%_100%] bg-[position:100%_0%] lg:bg-[position:190%_100%] relative overflow-hidden" >
+          <div className="box-border bg-white bg-[url('/contact/bg-one.png')] bg-no-repeat max-[480px]:bg-[size:auto_220px] bg-[size:auto_350px] lg:bg-auto rounded-[20px] z-[1] pt-[40px] sm:pt-[60px] md:pt-[70px] pb-[45px] pl-[30px] max-[480px]:bg-[position:100%_100%] bg-[position:100%_0%] lg:bg-[position:190%_100%] relative overflow-hidden" >
             <div className="box-border mb-[40px]">
               <div className="mb-[15px]">
-                <Button variant={"customOne"} className="uppercase" data-aos ="fade-right">
+                <Button variant={"customOne"} className="uppercase" data-aos ="fade-up">
                   <div className="h-[8px] w-[8px] rounded-full bg-btn-icon-color"></div>
                   Why Choose us
                 </Button>
               </div>
-              <h1 className="text-[32px] sm:text-[36px] lg:text-[60px] xl:text-[70px] font-medium leading-[44px] sm:leading-[46px] lg:leading-[65px] xl:leading-[70px] text-dark-color tracking-[-2.04px]  font-be-vietnam-pro" data-aos ="fade-right">
+              <h1 className="text-[32px] sm:text-[36px] lg:text-[60px] xl:text-[70px] font-medium leading-[44px] sm:leading-[46px] lg:leading-[65px] xl:leading-[70px] text-dark-color tracking-[-2.04px]  font-be-vietnam-pro" data-aos ="fade-up">
                 Join 500+
                 <br />
                 companies
@@ -44,7 +44,7 @@ export const Contact = () => {
             <div>
               <Button
                 variant={"customTwo"}
-                className="pl-[30px]! py-[6px]! pr-[6px]! border-[1px]! border-solid! border-dark-color bg-[#0000] hover:bg-dark-color! hover:text-white! gap-3! " data-aos ="fade-right"
+                className="pl-[30px]! py-[6px]! pr-[6px]! border-[1px]! border-solid! border-dark-color bg-[#0000] hover:bg-dark-color! hover:text-white! gap-3! " data-aos ="fade-up"
               >
                 Get Started
                 <div className="flex justify-center items-center w-[44px] h-[44px] rounded-[6px] bg-btn-icon-color ">
@@ -64,10 +64,10 @@ export const Contact = () => {
         </div>
         <div className="box-border w-full lg:w-1/2 lg:px-[10px] min-h-[1px] " >
           <div className="max-[480px]:p-[40px_20px_30px_20px] pt-[70px] pb-[55px] px-[60px] xl:px-[80px] bg-dark-color rounded-[20px] h-full " >
-            <h2 className=" text-[28px] leading-[34px] text-white tracking-[0.3px] mt-0 font-be-vietnam-pro mb-[30px] font-medium " data-aos = "fade-left">
+            <h2 className=" text-[28px] leading-[34px] text-white tracking-[0.3px] mt-0 font-be-vietnam-pro mb-[30px] font-medium " data-aos = "fade-up">
               Get Free Consulting
             </h2>
-            <div className="grid max-[480px]:grid-cols-1 grid-cols-2 gap-x-[20px] gap-y-[30px] " data-aos = "fade-left">
+            <div className="grid max-[480px]:grid-cols-1 grid-cols-2 gap-x-[20px] gap-y-[30px] " data-aos = "fade-up">
               <Input
                 type="text"
                 className={`${inputClassName}`}

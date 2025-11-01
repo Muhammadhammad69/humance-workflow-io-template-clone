@@ -11,7 +11,7 @@ export const About = () => {
   }, []);
 
   return (
-    <div className="mt-[100px] md:px-[50px]">
+    <div className="mt-[40px] xs:mt-[60px] sm:mt-[80px] md:mt-[100px] md:px-[50px]">
       <div className="flex flex-col md:flex-row">
         <div className="w-[30%]" data-aos="fade-up">
           <Button variant="customOne" className="font-dm-sans">
@@ -28,7 +28,7 @@ export const About = () => {
           </div>
           <div data-aos="fade-up">
             <p
-              className="mt-10 text-text-color-gray font-dm-sans leading-[26px] text-[17px] font-[500]"
+              className="mt-6 sm:mt-8 md:mt-10 text-text-color-gray font-dm-sans leading-[26px] text-[17px] font-[500]"
               data-aos="fade-up"
             >
               Where the future of energy is not just a concept it&apos;s our mission.

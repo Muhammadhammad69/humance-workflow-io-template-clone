@@ -1,3 +1,4 @@
+"use client";
 import React from "react";
 import Aos from "aos";
 import { useEffect } from "react";
@@ -38,7 +39,7 @@ export const CounterOne = () => {
     },
   ];
   return (
-    <section className="pt-[110px] pb-[100px]">
+    <section className="pt-[50px] xs:pt-[70px] sm:pt-[80px] md:pt-[100px] pb-[50px] xs:pb-[70px] sm:pb-[80px] md:pb-[100px]">
       <div className="grid  max-[460px]:grid-cols-1 grid-cols-2  lg:grid-cols-4 gap-[35px]">
         {counterOneInfo.map((item, index) => (
           <div className="box-border items-center" key={`counter-one-${index}`} data-aos="fade-up" data-aos-delay={item.delay}>

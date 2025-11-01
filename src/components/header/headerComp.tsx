@@ -1,4 +1,4 @@
-"use client"
+"use client";
 import React from "react";
 import Image from "next/image";
 import Link from "next/link";
@@ -18,56 +18,58 @@ import { useState } from "react";
 const components: { title: string; href: string; description: string }[] = [
   {
     title: "About Us",
-    href: "/docs/primitives/alert-dialog",
+    href: "/about-us",
     description:
       "A modal dialog that interrupts the user with important content and expects a response.",
   },
   {
     title: "FAQ",
-    href: "/docs/primitives/hover-card",
+    href: "/faq",
     description:
       "For sighted users to preview content available behind a link.",
   },
   {
     title: "Our Teams",
-    href: "/docs/primitives/progress",
+    href: "/our-team",
     description:
       "Displays an indicator showing the completion progress of a task, typically displayed as a progress bar.",
   },
   {
     title: "Style Guide",
-    href: "/docs/primitives/scroll-area",
+    href: "/utility-pages/style-guide",
     description: "Visually or semantically separates content.",
   },
   {
     title: "Pricing Plan",
-    href: "/docs/primitives/tabs",
+    href: "/pricing",
     description:
       "A set of layered sections of content—known as tab panels—that are displayed one at a time.",
   },
   {
     title: "Licensing",
-    href: "/docs/primitives/tooltip",
+    href: "/utility-pages/license",
     description:
       "A popup that displays information related to an element when the element receives keyboard focus or the mouse hovers over it.",
   },
   {
     title: "Projects",
-    href: "/docs/primitives/tooltip",
+    href: "/projects",
     description:
       "A popup that displays information related to an element when the element receives keyboard focus or the mouse hovers over it.",
   },
   {
     title: "Changelog",
-    href: "/docs/primitives/tooltip",
+    href: "/utility-pages/changelog",
     description:
       "A popup that displays information related to an element when the element receives keyboard focus or the mouse hovers over it.",
   },
 ];
 
-export const HeaderComp = (props: {props:{bgColor: string, color:string, isBlack:boolean}}) => {
-    const {bgColor, color, isBlack} = props.props
-    const logoPath = isBlack? "/logo-black.svg" : "logo.svg"
+export const HeaderComp = (props: {
+  props: { bgColor: string; color: string; isBlack: boolean };
+}) => {
+  const { bgColor, color, isBlack } = props.props;
+  const logoPath = isBlack ? "/logo-black.svg" : "logo.svg";
 
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [isBlogOpen, setIsBlogOpen] = useState(false);
@@ -78,21 +80,12 @@ export const HeaderComp = (props: {props:{bgColor: string, color:string, isBlack
   const togglePages = () => setIsPagesOpen(!isPagesOpen);
 
   const blogItems = [
-    { id: "blog1", label: "Blog 1", href: "/blog/blog-1" },
-    { id: "blog2", label: "Blog 2", href: "/blog/blog-2" },
+    { id: "blog1", label: "Blog 1", href: "/blog" },
+    { id: "blog2", label: "Blog 2", href: "/blog-02" },
   ];
-  const pagesItems = [
-    { id: "page1", label: "About Us", href: "/page/page-1" },
-    { id: "page2", label: "FAQ", href: "/page/page-2" },
-    { id: "page3", label: "Our Team", href: "/page/page-1" },
-    { id: "page4", label: "Style Guide", href: "/page/page-2" },
-    { id: "page5", label: "Pricing Plan", href: "/page/page-1" },
-    { id: "page6", label: "Licensing", href: "/page/page-2" },
-    { id: "page7", label: "Projects", href: "/page/page-1" },
-    { id: "page8", label: "Chnagelog", href: "/page/page-2" },
-  ];
+  
   return (
-    <header className={`${color}`}>
+    <header className={`${color} z-30`} >
       <div className="  mx-auto flex justify-between items-center ">
         <div className="flex items-center">
           <a className="flex title-font font-medium items-center md:justify-start justify-center ">
@@ -106,7 +99,9 @@ export const HeaderComp = (props: {props:{bgColor: string, color:string, isBlack
             {/* <span className="ml-3 text-xl">Tailblocks</span> */}
           </a>
           {/* bg-[#fff6] */}
-          <div className={` ${bgColor} rounded-[30px] ml-[50px] px-[10px] py-[10px] max-[991px]:hidden  `}>
+          <div
+            className={` ${bgColor} rounded-[30px] ml-[50px] px-[10px] py-[10px] max-[991px]:hidden  `}
+          >
             <NavigationMenu viewport={false}>
               <NavigationMenuList className={`${color}`}>
                 <NavigationMenuItem>
@@ -115,7 +110,7 @@ export const HeaderComp = (props: {props:{bgColor: string, color:string, isBlack
                     // className={navigationMenuTriggerStyle()}
                     className="bg-transparent! text-[16px] font-be-vietnam-pro font-medium text-inherit "
                   >
-                    <Link href="/docs" className="bg-none">
+                    <Link href="/" className="bg-none">
                       Home
                     </Link>
                   </NavigationMenuLink>
@@ -155,10 +150,10 @@ export const HeaderComp = (props: {props:{bgColor: string, color:string, isBlack
                     <ul className="grid w-[200px] gap-4 font-medium font-be-vietnam-pro">
                       <li>
                         <NavigationMenuLink asChild>
-                          <Link href="#">Blog 1</Link>
+                          <Link href="/blog">Blog 1</Link>
                         </NavigationMenuLink>
                         <NavigationMenuLink asChild>
-                          <Link href="#">Blog 2</Link>
+                          <Link href="/blog-02">Blog 2</Link>
                         </NavigationMenuLink>
                       </li>
                     </ul>
@@ -170,7 +165,7 @@ export const HeaderComp = (props: {props:{bgColor: string, color:string, isBlack
                     // className={navigationMenuTriggerStyle()}
                     className="bg-transparent! text-[16px] font-be-vietnam-pro font-medium text-inherit "
                   >
-                    <Link href="/docs" className="bg-none">
+                    <Link href="/contact" className="bg-none">
                       Contact
                     </Link>
                   </NavigationMenuLink>
@@ -190,7 +185,9 @@ export const HeaderComp = (props: {props:{bgColor: string, color:string, isBlack
                 className="w-[22px] h-[22px]"
               />
             </div>
-            <p className={`text-[16px] font-be-vietnam-pro font-[700] ${color} `}>
+            <p
+              className={`text-[16px] font-be-vietnam-pro font-[700] ${color} `}
+            >
               + 1(212) 255-511
             </p>
           </div>
@@ -213,58 +210,66 @@ export const HeaderComp = (props: {props:{bgColor: string, color:string, isBlack
           </div>
         </div>
         <div
-          className="max-[991px]:block hidden text-white"
+          className={`max-[991px]:block hidden ${color}`}
           onClick={toggleMenu}
         >
           <HiOutlineBars3 size={40} />
         </div>
         {isMenuOpen && (
           <div
-            className={`h-[600px] absolute top-[100%] rounded-[10px] overflow-hidden w-full  transition-all duration-300 ease-in-out ${
-              isMenuOpen ? "max-h-[500px] opacity-100" : "max-h-0 opacity-0"
+            className={` z-50 absolute ${
+              isBlack ? "top-[15%]" : "top-[100%]"
+            } rounded-[10px] overflow-hidden w-full  transition-all duration-300 ease-in-out ${
+              isMenuOpen ? " opacity-100" : "max-h-0 opacity-0"
             }`}
           >
-            <aside className="rounded-[10px]   pr-[38px]  w-full ">
+            <aside className="rounded-[10px]  pr-[38px]  w-full ">
               <div className="bg-white rounded-[10px] border-t-[3px] border-solid border-dark-color  px-[10px] py-[10px] min-[991px]:hidden transition-all duration-300 ease-in-out ">
-                <ul className="p-[20px] font-be-vietnam-pro text-dark-color text-[16px] font-medium space-y-4">
-                  <li>Home</li>
+                <ul className="p-[14px] xs:p-[20px] font-be-vietnam-pro text-dark-color text-[16px] font-medium space-y-4">
+                  <li>
+                    <Link href={"/"} className="cursor-pointer">
+                      Home
+                    </Link>
+                  </li>
                   <div className="">
                     <button
                       className="flex justify-between items-center p-0 w-full"
                       onClick={() => {
-                          togglePages();
-                        setIsBlogOpen(false)
+                        togglePages();
+                        setIsBlogOpen(false);
                       }}
                     >
                       <li>Pages</li>
                       <ChevronDown size={18} />
                     </button>
                     <div
-                      className={`grid grid-cols-2 overflow-hidden transition-all duration-300 ease-in-out ${
+                      className={`grid grid-cols-1 xs:grid-cols-2 overflow-hidden transition-all duration-300 ease-in-out ${
                         isPagesOpen
-                          ? "max-h-40 opacity-100 mt-1"
+                          ? "min-h-20 opacity-100 mt-1"
                           : "max-h-0 opacity-0"
                       }`}
                     >
-                      {pagesItems.map(({ id, label, href }) => (
-                        <a
-                          key={`pages-menu-${id}`}
+                      {components.map(({ title, href }, index) => (
+                        <Link
+                          key={`pages-menu-${index}`}
                           href={href}
-                          className="flex items-center px-2 py-[6px] ml-8 text-dark-color hover:bg-white hover:text-blue-600 rounded-lg transition-all duration-200"
+                          className="flex items-center px-2 py-[6px] ml-4 xs:ml-8 text-dark-color hover:bg-white hover:text-blue-600 rounded-lg transition-all duration-200"
                           onClick={() => setIsMenuOpen(false)}
                         >
-                          <span className="font-medium">{label}</span>
-                        </a>
+                          <span className="font-medium">{title}</span>
+                        </Link>
                       ))}
                     </div>
                   </div>
-                  <li>Service</li>
+                  <li>
+                    <Link href={"/services"}>Services</Link>
+                  </li>
                   <div className="">
                     <button
                       className="flex justify-between items-center p-0 w-full"
                       onClick={() => {
                         toggleBlog();
-                        setIsPagesOpen(false)
+                        setIsPagesOpen(false);
                       }}
                     >
                       <li>Blog</li>
@@ -278,18 +283,20 @@ export const HeaderComp = (props: {props:{bgColor: string, color:string, isBlack
                       }`}
                     >
                       {blogItems.map(({ id, label, href }) => (
-                        <a
-                          key={`blog-menu-${id}`}
+                        <Link
+                          key={`blog-menu-mobile-${id}`}
                           href={href}
-                          className="flex items-center px-2 py-[6px] ml-8 text-dark-color hover:bg-white hover:text-blue-600 rounded-lg transition-all duration-200"
+                          className="flex items-center px-2 py-[6px] ml-4 xs:ml-8 text-dark-color hover:bg-white hover:text-blue-600 rounded-lg transition-all duration-200"
                           onClick={() => setIsMenuOpen(false)}
                         >
                           <span className="font-medium">{label}</span>
-                        </a>
+                        </Link>
                       ))}
                     </div>
                   </div>
-                  <li>Contact</li>
+                  <li>
+                    <Link href={"/contact"}>Contact</Link>
+                  </li>
                 </ul>
               </div>
             </aside>

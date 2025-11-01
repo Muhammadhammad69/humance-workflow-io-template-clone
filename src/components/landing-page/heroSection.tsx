@@ -16,7 +16,6 @@ import { Button } from "@/components/ui/button";
 import Image from "next/image";
 
 import "../swiper-css/style.css";
-import { HeaderComp } from "@/components/header/headerComp";
 export const HeroSection = () => {
   const sliderData = [
     {
@@ -70,9 +69,7 @@ export const HeroSection = () => {
         modules={[Pagination, Autoplay]}
         className="mySwiper h-[400px] min-[490px]:h-[500px] md:h-[600px] min-[991px]:h-[850px] relative"
       >
-        <div className="absolute top-0 left-0 right-0 z-10 px-[20px] py-[20px]">
-          <HeaderComp props={{bgColor: "bg-[#fff6]", color:"text-white",isBlack:false}}/>
-        </div>
+        
         <>
           {sliderData.map((item) => (
             <SwiperSlide
